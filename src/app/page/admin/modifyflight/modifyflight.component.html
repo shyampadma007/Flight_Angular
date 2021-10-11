@@ -1,0 +1,17 @@
+<app-adminnavbar></app-adminnavbar>
+<table class="upFlight bg-light mt-4" id="users">
+    <tr>
+      <th class = "col-xs-4" *ngFor = "let column of headers">
+        {{column}}
+      </th><th>Action</th><th>Action</th>
+    </tr>
+  
+    <tr *ngFor = "let row of flightList">
+      <td *ngFor = "let column of headers">
+        {{row[column]}}
+      </td>
+      <td><button name="updateFlight(row)">Update</button></td>
+      <td><button name="deleteFlight(row)">Delete</button></td>
+    </tr>
+  
+  </table>

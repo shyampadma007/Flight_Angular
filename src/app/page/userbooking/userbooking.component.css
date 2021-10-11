@@ -1,0 +1,20 @@
+.userpage{
+    min-height: 100px;
+    max-width: 1000px !important;
+    margin: 0 auto 25px;
+   
+}
+.userpage .form-group{
+    margin-bottom: 15px;
+}
+
+.inner{
+    width: 10% !important;
+    height: 10% !important;
+    display: inline !important;
+}
+
+label {
+    display: inline;
+    margin-top: 10px;
+  }

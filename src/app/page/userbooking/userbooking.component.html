@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<p>Welcome  {{user}} </p>
+<tr>
+  <br><tr><a routerLink="/bookinghistory">Booking History / PNR</a> </tr>
+</tr><br><br>
+<!-- Search FLIGHT TABLE -->
+<div class="userpage bg-light mt-8"></div>
+<form #searchFlight="ngForm" (ngSubmit)="onSubmit(searchFlight)"> 
+    <div class=" userpage form-group col-xs-12">           
+            <label for="source">Source</label>
+            <select class="form-control inner" id='city' name='source' [(ngModel)]="source">
+                <option *ngFor="let item of cityValue" [value]="item">
+                  {{item}}
+                </option>    
+            </select>           
+         
+            <label for="destination">Destination</label>
+            <select class="form-control inner" id='city' name='destination' [(ngModel)]="destination">
+                <option *ngFor="let item of cityValue" [value]="item">
+                  {{item}}
+                </option>    
+            </select>          
+         
+            <label for="date">Date</label>
+            <input class="form-control inner" type="date" id="date" name="date" [(ngModel)]="sourcedate">           
+  
+            <button type="submit">Search Flight</button>        
+        </div>          
+    </form>

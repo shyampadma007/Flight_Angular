@@ -1,0 +1,12 @@
+.upFlight{
+    min-height: 100px;
+    display: table;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 60px;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+}
+.upFlight .form-group{
+    margin-bottom: 15px;
+}
