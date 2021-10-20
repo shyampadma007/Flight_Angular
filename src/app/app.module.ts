@@ -18,10 +18,13 @@ import { UserbookingComponent } from './page/userbooking/userbooking.component';
 import { AdminnavbarComponent } from './common/adminnavbar/adminnavbar.component';
 import { AddflightComponent } from './page/admin/addflight/addflight.component';
 import { ModifyflightComponent } from './page/admin/modifyflight/modifyflight.component';
-
-
-
-
+import { BookingComponent } from './page/booking/booking.component';
+import { BookinghistoryComponent } from './page/bookinghistory/bookinghistory.component';
+import { BooknavbarComponent } from './common/booknavbar/booknavbar.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { HistoryComponent } from './page/history/history.component';
+import { NgxPrintModule } from 'ngx-print';
+import { LogoutComponent } from './page/logout/logout.component';
  
 @NgModule({
   declarations: [
@@ -33,7 +36,12 @@ import { ModifyflightComponent } from './page/admin/modifyflight/modifyflight.co
     UserbookingComponent,
     AdminnavbarComponent,
     AddflightComponent,
-    ModifyflightComponent
+    ModifyflightComponent,
+    BookinghistoryComponent,
+    BookingComponent,
+    BooknavbarComponent,
+    HistoryComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,7 @@ import { ModifyflightComponent } from './page/admin/modifyflight/modifyflight.co
     MatInputModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
